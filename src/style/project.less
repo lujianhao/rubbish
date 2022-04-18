@@ -1,0 +1,209 @@
+// 项目全局样式
+@color-blue: #2C8CF2;
+@color-white: #fff;
+ul{
+  margin: 0;
+  padding: 0;
+  li{
+    list-style: none;
+  }
+}
+
+// 滚动条
+::-webkit-scrollbar{
+  width: 6px;
+  height: 8px;
+  border: 0 !important;
+}
+::-webkit-scrollbar-corner{
+  background: transparent;
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #D3DBF0;
+  border-radius: 5px;
+}
+
+// 系统组件样式
+.admin-layout .admin-layout-content{
+  padding: 20px 20px 0 !important;
+}
+.ant-menu-item .anticon, .ant-menu-submenu-title .anticon, .ant-menu-vertical .ant-menu-item, .ant-menu-vertical-left .ant-menu-item, .ant-menu-vertical-right .ant-menu-item, .ant-menu-inline .ant-menu-item, .ant-menu-vertical .ant-menu-submenu-title, .ant-menu-vertical-left .ant-menu-submenu-title, .ant-menu-vertical-right .ant-menu-submenu-title, .ant-menu-inline .ant-menu-submenu-title{
+  font-size: 16px;
+}
+.ant-menu-sub.ant-menu-inline{
+  padding: 0 10px;
+  >li{
+    padding-left: 38px !important;
+    border-radius: 20px;
+    &.ant-menu-item-selected{
+      background-color: @color-blue;
+      >a{
+        color: @color-white;
+      }
+    }
+    &:after{
+      border: 0 !important;
+    }
+  }
+}
+.tab{
+  font-size: 16px !important;
+}
+.ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab{
+  margin-right: 10px;
+  border: 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab-active{
+  background-color: @color-blue;
+  color: @color-white;
+  .icon-close, .icon-sync{
+    color: @color-white;
+  }
+}
+.tabs-container.affixed{
+  padding: 8px 20px 0 !important;
+}
+.ant-modal-body{
+  max-height: 70vh;
+  overflow: auto;
+}
+.special-table-dialog{
+  .ant-form-item-label{
+    line-height: 20px;
+  }
+  .ant-input-number{
+    width: 100%;
+  }
+}
+.ant-modal-header{
+  background-color: @color-blue;
+  .ant-modal-title{
+    font-size: 18px;
+    color: #fff;
+  }
+}
+.ant-modal-close-x{
+  font-size: 20px;
+  color: @color-white;
+}
+.ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-selected, .ant-tree li .ant-tree-node-content-wrapper:hover{
+  background-color: @color-blue;
+  color: @color-white;
+  border-radius: 4px;
+}
+.ant-form-item-label{
+  text-overflow: ellipsis;
+}
+.project-table-border{
+  .ant-table-body{
+    border-bottom: 1px solid #f0f0f0;
+  }
+}
+.ant-table-thead > tr > th, .ant-table-tbody > tr > td{
+  padding: 12px !important;
+}
+.ant-pagination-options-size-changer.ant-select{
+  margin-right: 0;
+}
+.ant-pagination-options-quick-jumper{
+  margin-left: 10px;
+}
+.ant-btn-sm{
+  padding: 0 5px;
+}
+.ant-btn > .anticon + span, .ant-btn > span + .anticon{
+  margin-left: 5px;
+}
+.ant-select{
+  min-width: 160px;
+}
+.ant-input[disabled]{
+  color: #666;
+}
+.ant-table td { white-space: nowrap; }
+.ant-dropdown-menu-item:hover{
+  background-color: @color-blue;
+  a{
+    color: #fff;
+  }
+}
+
+// 页面通用样式
+.project-page-tree{
+  display: flex;
+  height: calc(100vh - 64px - 48px - 16px);
+  overflow: hidden;
+  .project-page-tree-left, .project-page-tree-right{
+    padding: 20px;
+    width: 280px;
+    height: 100%;
+    overflow: auto;
+    background-color: @color-white;
+  }
+  .project-page-tree-right{
+    padding: 0;
+    margin-left: 10px;
+    width: calc(100% - 280px);
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    &.notree{
+      width: 100%;
+      margin-left: 0;
+    }
+    .project-page-tree-right-box{
+      height: 50%;
+      padding: 20px;
+      margin-bottom: 5px;
+      background-color: @color-white;
+      &:nth-last-child(1){
+        margin-bottom: 0;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+.project-table-top-operate{
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  button{
+    margin-left: 10px;
+    &:nth-of-type(1) {
+      margin-left: 0;
+    }
+  }
+}
+.project-table-operate{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-table-pagination{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+.project-tabs{
+  margin-bottom: 20px;
+  padding: 0;
+  display: flex;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 16px;
+  list-style: none;
+  li{
+    padding: 0 20px;
+    height: 34px;
+    line-height: 34px;
+    margin-right: 10px;
+    background-color: #F1F2F6;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    &.active{
+      background-color: @color-blue;
+      color: @color-white;
+    }
+  }
+}
